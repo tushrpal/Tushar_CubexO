@@ -174,3 +174,160 @@ Strings in python are surrounded by either single quotation marks, or double quo
         \f	Form Feed	
         \ooo	Octal value	
         \xhh	Hex value
+
+Lists
+
+
+    List is one of the built-in data types in Python. A Python list is a sequence of comma separated items, enclosed in square brackets [ ]. The items in a Python list need not be of the same data type.
+    Methods with Description
+
+    1	
+    list.append(obj)
+
+    Appends object obj to list.
+
+    2	
+    list.clear()
+
+    Clears the contents of list.
+
+    3	
+    list.copy()
+
+    Returns a copy of the list object.
+
+    4	
+    list.count(obj)
+
+    Returns count of how many times obj occurs in list
+
+    5	
+    list.extend(seq)
+
+    Appends the contents of seq to list
+
+    6	
+    list.index(obj)
+
+    Returns the lowest index in list that obj appears
+
+    7	
+    list.insert(index, obj)
+
+    Inserts object obj into list at offset index
+
+    8	
+    list.pop(obj=list[-1])
+
+    Removes and returns last object or obj from list
+
+    9	
+    list.remove(obj)
+
+    Removes object obj from list
+
+    10	
+    list.reverse()
+
+    Reverses objects of list in place
+
+    11	
+    list.sort([func])
+
+    Sorts objects of list, use compare func if given
+
+    Function with Description
+
+        1	cmp(list1, list2)
+        Compares elements of both lists.
+
+        2	len(list)
+        Gives the total length of the list.
+
+        3	max(list)
+        Returns item from the list with max value.
+
+        4	min(list)
+        Returns item from the list with min value.
+
+        5	list(seq)
+        Converts a tuple into list.
+
+
+
+Tupels
+================
+    Tuple is one of the built-in data types in Python. A Python tuple is a sequence of comma separated items, enclosed in parentheses (). The items in a Python tuple need not be of same data type.
+    tup1 = ("Rohan", "Physics", 21, 69.75)
+    tup2 = (1, 2, 3, 4, 5)
+
+
+
+
+Sets
+================
+    A set refers to a collection of distinct objects. It is used to group objects together and to study their properties and relationships. The objects in a set are called elements or members of the set.
+
+    my_set = {1, 2, 3, 4, 5}
+    my_set = set([1, 2, 3, 4, 5])
+
+    In Python, the update() method of set class is used to add multiple elements to the set. It modifies the set by adding elements from an iterable (such as another set, list, tuple, or string) to the current set. The elements in the iterable are inserted into the set if they are not already present.
+
+    The remove() method in Python is used to remove the first occurrence of a specified item from a set.
+
+
+dictionary
+=============
+
+A dictionary is a collection of key-value pairs. It is an unordered collection of items that can
+
+
+Python Dictionary Methods
+Python includes following dictionary methods −
+
+Sr.No.	Methods with Description
+1	dict.clear()
+Removes all elements of dictionary dict
+
+2	dict.copy()
+Returns a shallow copy of dictionary dict
+
+3	dict.fromkeys()
+Create a new dictionary with keys from seq and values set to value.
+
+4	dict.get(key, default=None)
+For key key, returns value or default if key not in dictionary
+
+5	dict.has_key(key)
+Returns true if key in dictionary dict, false otherwise
+
+6	dict.items()
+Returns a list of dict's (key, value) tuple pairs
+
+7	dict.keys()
+Returns list of dictionary dict's keys
+
+8	dict.setdefault(key, default=None)
+Similar to get(), but will set dict[key]=default if key is not already in dict
+
+9	dict.update(dict2)
+Adds dictionary dict2's key-values pairs to dict
+
+10	dict.values()
+Returns list of dictionary dict's values
+
+
+Function with Description
+1	cmp(dict1, dict2)
+Compares elements of both dict.
+
+2	len(dict)
+Gives the total length of the dictionary. This would be equal to the number of items in the dictionary.
+
+3	str(dict)
+Produces a printable string representation of a dictionary
+
+4	type(variable)
+Returns the type of the passed variable. If passed variable is dictionary, then it would return a dictionary type.
+
+
