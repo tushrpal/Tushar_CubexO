@@ -1,0 +1,231 @@
+.calendar-main {
+  /* border: 2px solid #dc2626; */
+  /* border-radius: 0.75rem; */
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  user-select: none;
+  width: 100%;
+  max-width: 20rem;
+  align-items: center;
+  font-family: "Inter";
+  font-weight: 500;
+  /* background-color: white; */
+}
+
+.calendar-container {
+  border: 2px solid #dc2626;
+  border-radius: 0.75rem;
+  /* padding: 0.5rem; */
+  font-family: sans-serif;
+  user-select: none;
+  width: 100%;
+  /* max-width: 20rem; */
+  background-color: white;
+}
+.red-bottom-border {
+  border-bottom: 1px solid red;
+  /* width:1rem; */
+  height: 1px;
+    margin-bottom: 0.8rem;
+    padding:0rem 9rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: black;
+
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-bottom: 0.25rem;
+   margin-top: 0.25rem;
+  /* border-bottom: 1px solid red; */
+}
+
+.nav-button {
+  color: #dc2626;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.nav-button:hover {
+  color: #b91c1c;
+}
+
+.month-display {
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: black;
+}
+
+.weekday {
+  text-align: center;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0.125rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.week-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column: 1 / -1;
+}
+
+.day {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  z-index: 1;
+  color: black;
+}
+
+/* Non-current month dim */
+.non-current-month {
+  color: #9ca3af;
+}
+
+/* Hover effect */
+.selectable:hover {
+  background-color: #ffefef;
+}
+
+.selectable {
+  cursor: pointer;
+}
+
+/* Start and End Dates */
+.day.range-start,
+.day.range-end {
+  background-color: #ffe0e0 !important;
+  color: #dc2626 !important;
+  border: 2px solid #dc2626 !important;
+  font-weight: bold;
+  z-index: 15;
+}
+
+/* Highlight in-range dates (before) */
+.day.in-range:not(.range-start):not(.range-end)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -40%;
+  right: -40%;
+  height: 30px;
+  margin: auto;
+  background-color: #ffe0e0;
+  z-index: -3;
+  border-radius: 0;
+}
+
+/* Rounded edges for first and last in-row range */
+.day:first-child.in-range:not(.range-start):not(.range-end)::before {
+  left: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.day:last-child.in-range:not(.range-start):not(.range-end)::before {
+  right: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+/* Unavailable date on top of everything */
+.unavailable {
+  position: relative;
+  z-index: 5; /* must be higher than ::before z-index=0 */
+}
+
+.unavailable::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dc2626;
+  border-radius: 50%;
+  z-index: -1; /* sits behind the date number but above ::before */
+}
+
+.unavailable span {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* Legend styles */
+.calendar-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: black;
+  margin: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.unavailable-legend {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: #dc2626;
+}
+
+.selected-legend {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  border: 2px solid #dc2626;
+  box-sizing: border-box;
+}
+
+/* Past dates before today */
+.day.past {
+  /* background-color: #f3f4f6; light gray */
+  color: #9ca3af; /* muted text */
+}
+
+button:focus, button:focus-visible {
+    outline: none;
+}
+button:hover {
+    border:none
+}

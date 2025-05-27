@@ -1,0 +1,1 @@
+Hello this file is created by nodejs and reupdated by fs moduleUpdated text by fs module
